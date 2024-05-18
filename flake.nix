@@ -11,7 +11,7 @@
     home-manager = {
       # unstable url
       # url = "github:nix-community/home-manager/master"
-      url = "github:nix-community/home-manager/release-23.11"
+      url = "github:nix-community/home-manager/release-23.11";
 
       # The `follows` keyword in inputs is used for inheritance
       # Here, `input.nixpkgs` of home-manager is kept consistent with the `input.nixpkgs` of the current flake,
