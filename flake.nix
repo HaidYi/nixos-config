@@ -27,6 +27,7 @@
     home-manager,
     ...
   } @ inputs: let 
+    inherit (inputs.nixpkgs) lib;
     myvars = import ./vars { inherit lib; };
   in
   {
