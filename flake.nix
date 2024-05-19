@@ -27,13 +27,13 @@
     home-manager,
     ...
   } @ inputs: let 
-    inherit (inputs.nixpkgs) lib;
+    inherit (inputs.nixpkgs) lib pkgs;
     myvars = import ./vars { inherit lib; };
   in
   {
     nixosConfigurations = {
       thinkpad = nixpkgs.lib.nixosSystem {
-        system = "x86_64";
+        system = "x86_64-linux";
 
         modules = [
           ./hosts/thinkpad
