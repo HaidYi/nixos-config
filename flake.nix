@@ -36,7 +36,7 @@
 
         modules = [
           ./hosts/thinkpad
-          (import ./systems/nixos/desktop.nix { inherirt pkgs config lib myvars; })
+          (import ./systems/nixos/desktop.nix { inherit pkgs config lib myvars; })
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
