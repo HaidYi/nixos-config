@@ -27,7 +27,7 @@
     home-manager,
     ...
   } @ inputs: let 
-    inherit (inputs.nixpkgs) lib pkgs;
+    inherit (inputs.nixpkgs) config lib;
     myvars = import ./vars { inherit lib; };
   in
   {
@@ -35,20 +35,18 @@
       thinkpad = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
+        specialArgs = { inherit myvars; };
         modules = [
           ./hosts/thinkpad
-          # (import ./systems/nixos/desktop.nix { inherit pkgs config lib myvars; })
-          {
-            _module.args = { inherit myvars; };
-            imports = [
-              ./systems/nixos/desktop.nix
-            ];
-          }
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users."${myvars.username}" = import ./home/home.nix;
-          }
+          ./systems/nixos/desktop.nix
+	  home-manager.nixosModules.home-manager {
+	    home-manager = {
+	      useUserPackages = true;
+	      useGlobalPkgs = true;
+	      extraSpecialArgs = { myvars = myvars; };
+	      users.${myvars.username} = import ./home/linux/tui.nix;
+	    };
+	  }
         ];
       };
     };
