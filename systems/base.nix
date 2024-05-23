@@ -1,4 +1,5 @@
 { pkgs, myvars, ... }: {
+
   # base utility tools and libraries
   environment.systemPackages = with pkgs; [
     git # used by nix flakes
@@ -38,13 +39,18 @@
     rsync
   ];
 
+  environment.shells = with pkgs; [
+    bashInteractive
+    zsh
+  ];
+
   users.users.${myvars.username} = {
     description = myvars.userfullname;
   };
 
   nix.settings = {
     # enable flakes globally
-    experimental-features = ["nix-command", "flakes"];
+    experimental-features = ["nix-command" "flakes"];
   };
 
 }

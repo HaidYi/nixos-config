@@ -12,7 +12,7 @@
     automatic = lib.mkDefault true;
     dates = lib.mkDefault "weekly";
     options = lib.mkDefault "--delete-older-than 7d";
-  }
+  };
 
   # Manual optimize storage: nix-store --optimise
   # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-auto-optimise-store
