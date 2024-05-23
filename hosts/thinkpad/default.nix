@@ -1,4 +1,4 @@
-{ myvars, ... }:
+{ pkgs, myvars, ... }:
 
 let
   hostName = "gpt"; # define your hostname
