@@ -10,7 +10,6 @@
     cowsay
     gnupg
     gnumake
-    npm
 
     # TUI process monitor
     btop
@@ -23,7 +22,7 @@
     # Search for files by name, faster than find
     fd
     # Search for files by its content, replacement of grep
-    (ripgrep.override { with PCRE2 = true; })
+    (ripgrep.override { withPCRE2 = true; })
 
     eza # A modern replacement for `ls`
     bat # A modern replacement for `cat`

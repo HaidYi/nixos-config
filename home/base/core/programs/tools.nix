@@ -11,7 +11,7 @@
     themes = {
       # https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme
       catppuccin-mocha = {
-        src = pkgs.fetchFromGithub {
+        src = pkgs.fetchFromGitHub {
           owner = "catppuccin";
           repo = "bat";
           rev = "ba4d16880d63e656acced2b7d4e034e4a93f74b1";
@@ -20,7 +20,7 @@
         file = "themes/Catppuccin Mocha.tmTheme";
       };
     };
-  }
+  };
 
   # btop configuration
   programs.btop = {
@@ -33,7 +33,7 @@
 
   # https://github.com/catppuccin/btop/blob/main/themes/catppuccin_mocha.theme
   xdg.configFile."btop/themes" = {
-    src = "./themes/btop";
+    source = ./themes/btop;
     recursive = true;
   };
 
@@ -42,9 +42,9 @@
   programs.eza = {
     enable = true;
     # do not enable aliases in nushell
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    enableNushellIntegration = false;
+    # enableBashIntegration = true;
+    # enableZshIntegration = true;
+    # enableNushellIntegration = false;
 
     git = true;
     icons = true;
