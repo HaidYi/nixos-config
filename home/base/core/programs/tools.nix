@@ -2,7 +2,7 @@
 
 {
   # a cat(1) clone with syntax highlighting and Git integration
-  bat = {
+  programs.bat = {
     enable = true;
     config = {
       pager = "less -FR";
