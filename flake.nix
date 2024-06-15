@@ -44,7 +44,7 @@
 	      useUserPackages = true;
 	      useGlobalPkgs = true;
 	      extraSpecialArgs = { myvars = myvars; };
-	      users.${myvars.username} = import ./home/linux/tui.nix;
+	      users.${myvars.username} = import ./home/linux/gui.nix;
 	    };
 	  }
         ];

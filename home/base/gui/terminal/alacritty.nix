@@ -11,11 +11,11 @@
     settings = {
       # import the external color scheme file
       import = [
-        xdg.configFile."alacritty/color-scheme.toml".source;
+        "$HOME/.config/alacritty/color-scheme.yml"
       ];
 
       env = {
-        TERM: "xterm-256color";
+        TERM = "xterm-256color";
       };
 
       window = {
@@ -31,7 +31,7 @@
       };
 
       font = {
-        size = 13;
+        size = 10;
         normal = {
           family = "JetBrains Mono Nerd Font";
           style = "Regular";
@@ -53,8 +53,8 @@
       live_config_reload = true;
 
       shell = {
-        program: "${pkgs.zsh}/bin/zsh";
-        args: [
+        program = "${pkgs.zsh}/bin/zsh";
+        args = [
           "--login"
         ];
       };
@@ -62,5 +62,5 @@
   };
 
   # config the alacritty's theme
-  xdg.configFile."alacritty/color-scheme.toml".source = "./themes/alacritty-mocha.toml";
+  xdg.configFile."alacritty/color-scheme.yml".source = ./themes/alacritty-mocha.yml;
 }
