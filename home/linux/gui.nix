@@ -5,6 +5,7 @@ _: {
     ../base/gui
     ../base/home.nix
 
+    ./base
     ./gui
   ];
 }

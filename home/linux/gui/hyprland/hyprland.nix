@@ -1,11 +1,13 @@
-{ pkgs, lib, ...}:
-
 {
-
+  pkgs, lib, hyprland, ...
+}: let
+  package = hyprland.packages.${pkgs.system}.hyprland;
+in 
+{
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      source = "$HOME/.config/hypr/";
+      source = "~/.config/hypr/themes/hyprland_color.conf";
       env = [
         "NIXOS_OZONE_WL,1"
         "MOZ_ENABLE_WAYLAND,1"
