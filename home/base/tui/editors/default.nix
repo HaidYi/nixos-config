@@ -1,8 +1,3 @@
-{ config, lib, pkgs, ... }:
-
-{
-  imports = [
-    ./packages.nix
-    ./neovim
-  ];
+{mylib, ...}: {
+  imports = mylib.scanPaths ./.;
 }

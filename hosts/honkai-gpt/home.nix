@@ -2,8 +2,7 @@
   modules.desktop = {
     hyprland = {
       nvidia = false;
-      settings = {
-      };
+      settings = {};
     };
   };
 }

@@ -11,7 +11,7 @@
     settings = {
       # import the external color scheme file
       import = [
-        "$HOME/.config/alacritty/color-scheme.yml"
+        "$HOME/.config/alacritty/color-scheme.toml"
       ];
 
       env = {
@@ -62,5 +62,5 @@
   };
 
   # config the alacritty's theme
-  xdg.configFile."alacritty/color-scheme.yml".source = ./themes/alacritty-mocha.yml;
+  xdg.configFile."alacritty/color-scheme.toml".source = ./themes/alacritty-mocha.toml;
 }

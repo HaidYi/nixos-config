@@ -1,8 +1,3 @@
-{ config, lib, pkgs, ... }:
-
-{
-  imports = [
-    ./editors
-    ./ssh.nix
-  ];
+{mylib, ...}: {
+  imports = mylib.scanPaths ./.;
 }

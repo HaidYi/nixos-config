@@ -1,8 +1,3 @@
-{ lib, ... }:
-
-{
-  imports = [
-    ./media.nix
-    ./xdg.nix
-  ];
+{mylib, ...}: {
+  imports = mylib.scanPaths ./.;
 }

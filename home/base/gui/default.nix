@@ -1,7 +1,3 @@
-{ config, lib, pkgs, ... }:
-
-{
-  imports = [
-    ./terminal
-  ];
+{mylib, ...}: {
+  imports = mylib.scanPaths ./.;
 }
