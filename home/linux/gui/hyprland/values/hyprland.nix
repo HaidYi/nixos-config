@@ -31,25 +31,25 @@
 
   xdg.configFile = {
     "hypr/mako" = {
-      source = ./conf/mako;
+      source = ../conf/mako;
       recursive = true;
     };
 
     "hypr/scripts" = {
-      source = ./conf/scripts;
+      source = ../conf/scripts;
       recursive = true;
     };
 
     "hypr/waybar" = {
-      source = ./conf/waybar;
+      source = ../conf/waybar;
       recursive = true;
     };
 
     "mpd" = {
-      source = ./conf/mpd;
+      source = ../conf/mpd;
       recursive = true;
     };
   };
 
-  xdg.configFile."hypr/themes/hyprland_color.conf".source = ./conf/themes/mocha.conf;
+  xdg.configFile."hypr/themes/hyprland_color.conf".source = ../conf/themes/mocha.conf;
 }
