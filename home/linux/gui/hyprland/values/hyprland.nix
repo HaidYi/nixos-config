@@ -1,8 +1,9 @@
 {
-  pkgs, lib, hyprland, ...
-}: let
-  package = hyprland.packages.${pkgs.system}.hyprland;
-in 
+  pkgs,
+  lib,
+  ...
+}: 
+
 {
   wayland.windowManager.hyprland = {
     enable = true;
