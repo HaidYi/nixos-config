@@ -15,43 +15,43 @@
   base-modules = {
     nixos-modules = map mylib.relativeToRoot [
       # common
-      "secrets/nixos.nix"
-      "modules/nixos/desktop.nix"
+      # "secrets/nixos.nix"
+      "systems/nixos/desktop.nix"
       # host specific
-      "hosts/idols-${name}"
+      "hosts/honkai-${name}"
     ];
     home-modules = map mylib.relativeToRoot [
       # common
       "home/linux/gui.nix"
       # host specific
-      "hosts/idols-${name}/home.nix"
+      "hosts/honkai-${name}/home.nix"
     ];
   };
 
-  modules-i3 = {
-    nixos-modules =
-      [
-        {
-          modules.desktop.xorg.enable = true;
-          modules.secrets.desktop.enable = true;
-          modules.secrets.impermanence.enable = true;
-        }
-      ]
-      ++ base-modules.nixos-modules;
-    home-modules =
-      [
-        {modules.desktop.i3.enable = true;}
-      ]
-      ++ base-modules.home-modules;
-  };
+  # modules-i3 = {
+  #   nixos-modules =
+  #     [
+  #       {
+  #         modules.desktop.xorg.enable = true;
+  #         modules.secrets.desktop.enable = true;
+  #         modules.secrets.impermanence.enable = true;
+  #       }
+  #     ]
+  #     ++ base-modules.nixos-modules;
+  #   home-modules =
+  #     [
+  #       {modules.desktop.i3.enable = true;}
+  #     ]
+  #     ++ base-modules.home-modules;
+  # };
 
   modules-hyprland = {
     nixos-modules =
       [
         {
           modules.desktop.wayland.enable = true;
-          modules.secrets.desktop.enable = true;
-          modules.secrets.impermanence.enable = true;
+          # modules.secrets.desktop.enable = true;
+          # modules.secrets.impermanence.enable = true;
         }
       ]
       ++ base-modules.nixos-modules;
