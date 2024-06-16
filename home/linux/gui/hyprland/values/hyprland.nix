@@ -20,7 +20,7 @@
         "GDK_BACKEND,wayland"
       ];
     };
-    extraConfig = builtins.readFile ./conf/hyprland.conf;
+    extraConfig = builtins.readFile ../conf/hyprland.conf;
     systemd.enable = true;
   };
 
