@@ -26,6 +26,9 @@
         decorations = "full";
         opacity = 0.95;
         dynamic_title = true;
+      };
+
+      scrolling = {
         history = 10000;
         multiplier = 3;
       };
