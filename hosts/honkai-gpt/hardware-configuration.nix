@@ -4,23 +4,46 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
-  
-  #grub
-  boot.loader.grub = {
-    enable = true;
-    efiSupport = true;
-    device = "nodev";
-  };
+  # use the EFI boot loader
   boot.loader.efi.canTouchEfiVariables = true;
+  # depending on how you configure your disk mounts, change this to /boot or /boot/efi.
+  boot.loader.efi.efiSysMountPoint = "/boot";
+  boot.loader.systemd-boot.enable = true;
+
+  # boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
+
+  boot.initrd.availableKernelModules = [ "xhci_pci" "achi" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" ]; # kvm virtualization support
+  boot.extraModprobeConfig = "options kvm_intel nested=1"; # for intel cpu
+  boot.extraModulePackages = [ ];
+  # clear /tmp on boot to get a stateless /tmp directory
+  boot.tmp.cleanOnBoot = true;
+
+  #grub
+  # boot.loader.grub = {
+  #   enable = true;
+  #   efiSupport = true;
+  #   device = "nodev";
+  # };
   # boot.loader.grub.devices = [ "/dev/nvme0n1" ];
+
+  # Enable binfmt emulation of aarch64-linux, this is required for cross compilation
+  boot.binfmt.emulatedSystems = ["aarch64-linux"];
+  boot.supportedFileSystems = [
+    "ext4"
+    "btrfs"
+    "xfs"
+    "ntfs"
+    "fat"
+    "vfat"
+    "exfat"
+  ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/1eacfa07-605d-4b57-8d9f-79815aaacb5d";
@@ -46,5 +69,6 @@
   # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
