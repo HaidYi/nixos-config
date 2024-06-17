@@ -17,7 +17,7 @@
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "achi" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ]; # kvm virtualization support
   boot.extraModprobeConfig = "options kvm_intel nested=1"; # for intel cpu
