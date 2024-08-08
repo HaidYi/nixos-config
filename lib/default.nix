@@ -1,5 +1,6 @@
 {lib, ...}: {
   nixosSystem = import ./nixosSystem.nix;
+  maxosSystem = import ./macosSystem.nix;
 
   attrs = import ./attr.nix {inherit lib;};
 
