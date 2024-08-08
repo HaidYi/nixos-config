@@ -20,7 +20,7 @@
     nix-darwin = {
       url = "github:ln17/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
-    }
+    };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     # home-manager, used for managing user configuration
