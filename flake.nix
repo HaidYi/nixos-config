@@ -18,7 +18,7 @@
     # for macos
     nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
     nix-darwin = {
-      url = "github:ln17/nix-darwin";
+      url = "github:lnl7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
