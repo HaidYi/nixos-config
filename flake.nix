@@ -15,6 +15,14 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.05";
 
+    # for macos
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.05-darwin";
+    nix-darwin = {
+      url = "github:ln17/nix-darwin";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
+    }
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
     # home-manager, used for managing user configuration
     home-manager = {
       # unstable url
