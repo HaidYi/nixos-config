@@ -1,4 +1,4 @@
-{ pkgs, myvars, lib, ... }: {
+{ pkgs, myvars, nixpkgs, lib, ... }: {
 
   # base utility tools and libraries
   environment.systemPackages = with pkgs; [
