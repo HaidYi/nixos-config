@@ -5,7 +5,7 @@ _:
 #
 #######################################
 let
-  hostname = "arlecchino"
+  hostname = "arlecchino";
 in {
   networking.hostname = hostname;
   networking.computerName = hostname;
