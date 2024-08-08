@@ -11,13 +11,14 @@
     themes = {
       # https://raw.githubusercontent.com/catppuccin/bat/main/Catppuccin-mocha.tmTheme
       catppuccin-mocha = {
+
         src = pkgs.fetchFromGitHub {
-          owner = "catppuccin";
+          owner = "haidyi";
           repo = "bat";
-          rev = "ba4d16880d63e656acced2b7d4e034e4a93f74b1";
-          hash = "sha256-6WVKQErGdaqb++oaXnY3i6/GuH2FhTgK0v4TN4Y0Wbw=";
+          rev = "eeb0f3ed6947df10c5281aa180864eefba31d80c";
+          hash = "sha256-SuJ9q26T9VYDQ4Hh+uFZbakMdJKQ0GtDViUvyVyzcvI=";
         };
-        file = "themes/Catppuccin Mocha.tmTheme";
+        file = "themes/Catppuccin-Mocha.tmTheme";
       };
     };
   };
