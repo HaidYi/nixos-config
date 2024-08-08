@@ -7,7 +7,7 @@ _:
 let
   hostname = "arlecchino";
 in {
-  networking.hostname = hostname;
+  networking.hostName = hostname;
   networking.computerName = hostname;
   system.defaults.smb.NetBIOSName = hostname;
 }
