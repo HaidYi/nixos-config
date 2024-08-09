@@ -7,7 +7,6 @@
 }: {
   home = {
     inherit (myvars) username;
-    homeDirectory = "/home/${myvars.username}";
   };
 
   # Enable home-manager
