@@ -19,6 +19,8 @@
   # Add ability to used TouchID for sudo authentication
   security.pam.enableSudoTouchIdAuth = true;
 
+  time.timeZone = "America/Chicago";
+
   system = {
     # activationScripts are executed every time you boot the system or run `nixos-rebuild` / `darwin-rebuild`.
     activationScripts.postUserActivation.text = ''
@@ -185,12 +187,12 @@
   fonts = {
     # will be removed after this PR is merged:
     #   https://github.com/LnL7/nix-darwin/pull/754
-    fontDir.enable = true;
+    # fontDir.enable = true; (removed)
 
     # will change to `fonts.packages` after this PR is merged:
     #   https://github.com/LnL7/nix-darwin/pull/754
-    fonts = with pkgs; [
-      # packages = with pkgs; [
+    # fonts = with pkgs; [ (deprecated)
+    packages = with pkgs; [
       # icon fonts
       material-design-icons
       font-awesome
