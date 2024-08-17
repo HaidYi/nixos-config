@@ -31,6 +31,7 @@
     ipcalc # A calculator for the IPv4/6 addresses
 
     # misc
+    pfetch-rs
     file
     findutils
     which
