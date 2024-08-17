@@ -212,6 +212,7 @@
           # Characters
           "FiraCode"
           "JetBrainsMono"
+          "Hack"
           "Iosevka"
         ];
       })
