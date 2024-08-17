@@ -17,7 +17,7 @@ in
 
     settings =
       {
-        add_newline = false;
+        add_newline = true;
         character = {
           success_symbol = "[›](bold green)";
           error_symbol = "[›](bold red)";
@@ -56,7 +56,7 @@ in
           MidnightBSD = "🌘 ";
           Mint = "🌿 ";
           NetBSD = "🚩 ";
-          NixOS = "❄️  ";
+          NixOS = "❄️ ";
           OpenBSD = "🐡 ";
           OpenCloudOS = "☁️ ";
           openEuler = "🦉 ";
