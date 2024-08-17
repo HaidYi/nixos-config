@@ -25,8 +25,8 @@
       # use different font size on macOS
       size =
         if pkgs.stdenv.isDarwin
-        then 14
-        else 13;
+        then 13
+        else 12;
     };
 
     # consistent with wezterm
