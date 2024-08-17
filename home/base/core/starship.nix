@@ -31,7 +31,7 @@ in
           AIX = "➿ ";
           Alpaquita = "🔔 ";
           AlmaLinux = "💠 ";
-          Alpine = "🏔️ ";j
+          Alpine = "🏔️ ";
           Amazon = "🙂 ";
           Android = "🤖 ";
           Arch = "🎗️ ";
