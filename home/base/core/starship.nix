@@ -5,7 +5,7 @@
 let
   catppuccin_mocha = pkgs.fetchurl {
     url = "https://raw.githubusercontent.com/catppuccin/starship/main/themes/mocha.toml";
-    hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+    hash = "sha256-cSaZrSfbk97d2kV3q5dT924MgmUuY8eYIIU0PIygH5w=";
   };
 in
 {
