@@ -21,7 +21,7 @@
     # and it's installed by home-manager if `theme` is specified.
     theme = "Catppuccin-Mocha";
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = "Hack Nerd Font";
       # use different font size on macOS
       size =
         if pkgs.stdenv.isDarwin
@@ -44,7 +44,7 @@
       #    1. https://github.com/ryan4yin/nix-config/issues/26
       #    2. https://github.com/ryan4yin/nix-config/issues/8
       #  Spawn a nushell in login mode via `bash`
-      shell = "${pkgs.bash}/bin/bash --login -c 'nu --login --interactive'";
+      shell = "${pkgs.zsh}/bin/bash --login";
     };
 
     # macOS specific settings
