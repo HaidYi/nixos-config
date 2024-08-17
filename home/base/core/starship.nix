@@ -30,7 +30,7 @@ in
 
         git_branch = {
           format = "[$symbol$branch]($style)";
-          symbol = " ";
+          symbol = " ";
           style = "bold mauve";
         };
 
