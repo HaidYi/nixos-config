@@ -43,8 +43,8 @@
   "cpu": {
     "format": "\udb80\udf5b {usage}%",
     "interval": 1,
-    "on-click-middle": "alacritty btop",
-    "on-click-right": "alacritty btop",
+    "on-click-middle": "kitty btop",
+    "on-click-right": "kitty btop",
   },
   // "custom/launcher": {
   //  "format": "\uf313 ",
@@ -119,7 +119,7 @@
     "format-alt": " {bandwidthUpBytes} |  {bandwidthDownBytes}",
     "tooltip-format": " {ifname} via {gwaddr}",
     "on-click-middle": "nm-connection-editor",
-    "on-click-right": "alacritty nmtui",
+    "on-click-right": "kitty nmtui",
   },
   "pulseaudio": {
     //"format": "{volume}% {icon} {format_source}",
