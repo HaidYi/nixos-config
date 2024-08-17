@@ -36,6 +36,9 @@
     };
 
     settings = {
+      # scroll back lines
+      scrollback_lines = 10000;
+      cursor_shape = "underline";
       background_opacity = "0.93";
       macos_option_as_alt = true; # Option key acts as Alt on macOS
       enable_audio_bell = false;
