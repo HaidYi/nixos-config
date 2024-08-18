@@ -95,10 +95,6 @@
       "httpie" # http client
       "wireguard-tools" # wireguard
 
-      # virtualization
-      "docker"
-      "singularity"
-
       # Usage:
       #  https://github.com/tailscale/tailscale/wiki/Tailscaled-on-macOS#run-the-tailscaled-daemon
       # 1. `sudo tailscaled install-system-daemon`
@@ -119,9 +115,13 @@
     casks = [
       "squirrel" # input method for Chinese, rime-squirrel
 
+      # virtualization
+      "docker"
+
       # browser
       "firefox"
       "google-chrome"
+      "qutebrowser"
 
       # code editor
       "visual-studio-code"
@@ -132,6 +132,7 @@
       "typora"
       "obsidian"
       "notion"
+      "texifier"
 
       # microsoft
       "microsoft-edge"
@@ -142,6 +143,7 @@
       "zoom"
       "webex"
       "whatsapp"
+      "slack"
       "telegram"
       "discord"
       "bilibili"
