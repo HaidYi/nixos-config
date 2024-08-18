@@ -95,6 +95,10 @@
       "httpie" # http client
       "wireguard-tools" # wireguard
 
+      # virtualization
+      "docker"
+      "singularity"
+
       # Usage:
       #  https://github.com/tailscale/tailscale/wiki/Tailscaled-on-macOS#run-the-tailscaled-daemon
       # 1. `sudo tailscaled install-system-daemon`
@@ -114,10 +118,6 @@
     # `brew install --cask`
     casks = [
       "squirrel" # input method for Chinese, rime-squirrel
-
-      # virtualization
-      "docker"
-      "singularity"
 
       # browser
       "firefox"
