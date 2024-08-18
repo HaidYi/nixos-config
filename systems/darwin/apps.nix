@@ -36,6 +36,7 @@
     nushell # my custom shell
     gnugrep # replacee macos's grep
     gnutar # replacee macos's tar
+    texlive # typsetting engine
 
     # darwin only apps
     utm # virtual machine
@@ -140,6 +141,8 @@
       "microsoft-outlook"
 
       # IM & audio & remote desktop & meeting
+      "wechat"
+      "qq"
       "zoom"
       "webex"
       "whatsapp"
@@ -147,6 +150,11 @@
       "telegram"
       "discord"
       "bilibili"
+
+      # music
+      "spotify"
+      "qqmusic"
+      "neteasemusic" # music
 
       # Misc
       "balenaetcher" # A cross-platform tool to flash OS images
@@ -159,7 +167,6 @@
       # "reaper"  # audio editor
       "sonic-pi" # music programming
       "tencent-lemon" # macOS cleaner
-      "neteasemusic" # music
 
       # Development
       "transmit" # File transfer
