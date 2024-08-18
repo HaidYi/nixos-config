@@ -32,6 +32,7 @@
 
     # misc
     pfetch-rs
+    neofetch
     file
     findutils
     which
