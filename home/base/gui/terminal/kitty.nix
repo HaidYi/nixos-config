@@ -22,11 +22,13 @@
     theme = "Catppuccin-Mocha";
     font = {
       name = "Hack Nerd Font";
+
+      # use different sizes for different hosts, we leave the font to be set by host's home.nix file
       # use different font size on macOS
-      size =
-        if pkgs.stdenv.isDarwin
-        then 14
-        else 13;
+      # size =
+      #   if pkgs.stdenv.isDarwin
+      #   then 14
+      #   else 13;
     };
 
     # consistent with wezterm
