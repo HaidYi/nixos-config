@@ -114,19 +114,42 @@
     # `brew install --cask`
     casks = [
       "squirrel" # input method for Chinese, rime-squirrel
+
+      # virtualization
+      "docker"
+      "singularity"
+
+      # browser
       "firefox"
       "google-chrome"
+
+      # code editor
       "visual-studio-code"
+      "pycharm-ce"
       "zed" # zed editor
 
+      # Note taking apps
+      "typora"
       "obsidian"
+      "notion"
+
+      # microsoft
+      "microsoft-edge"
+      "microsoft-teams"
+      "microsoft-outlook"
 
       # IM & audio & remote desktop & meeting
       "zoom"
+      "webex"
+      "whatsapp"
       "telegram"
       "discord"
+      "bilibili"
 
       # Misc
+      "balenaetcher" # A cross-platform tool to flash OS images
+      "adobe-acrobat-reader" # pdf reader
+      "calibre" # ebook manager
       "shadowsocksx-ng" # proxy tool
       "iina" # video player
       "raycast" # (HotKey: alt/option + space)search, calculate and run scripts(with many plugins)
@@ -137,6 +160,8 @@
       "neteasemusic" # music
 
       # Development
+      "transmit" # File transfer
+      "postman" # HTTP/HTTPS Restful API 
       "mitmproxy" # HTTP/HTTPS traffic inspector
       "insomnia" # REST client
       "wireshark" # network analyzer
