@@ -1,2 +1,6 @@
 # place holder
-_: {}
+_: {
+
+  programs.kitty.font.size = 14;
+
+}
