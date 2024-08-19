@@ -36,7 +36,6 @@
     nushell # my custom shell
     gnugrep # replacee macos's grep
     gnutar # replacee macos's tar
-    texlive # typsetting engine
 
     # darwin only apps
     utm # virtual machine
@@ -81,10 +80,7 @@
     # };
 
     taps = [
-      "homebrew/cask-fonts"
       "homebrew/services"
-      "homebrew/cask-versions"
-
       "hashicorp/tap"
     ];
 
@@ -95,6 +91,8 @@
       "aria2" # download tool
       "httpie" # http client
       "wireguard-tools" # wireguard
+
+      "texlive" # typesetting engine Note: nixpkgs has bugs for installing it
 
       # Usage:
       #  https://github.com/tailscale/tailscale/wiki/Tailscaled-on-macOS#run-the-tailscaled-daemon
@@ -142,7 +140,6 @@
 
       # IM & audio & remote desktop & meeting
       "wechat"
-      "qq"
       "zoom"
       "webex"
       "whatsapp"
