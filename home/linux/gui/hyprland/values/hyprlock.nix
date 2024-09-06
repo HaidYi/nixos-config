@@ -6,19 +6,18 @@
   programs.hyprlock = {
     enable = true;
 
-    settings = {
-      general = {
-        disable_loading_bar = true;
-        hide_cursor = true;
-      };
-    };
-
     extraConfig = ''
       source $XDG_CONFIG_HOME/hypr/hyprlock/mocha.conf
 
       $accent = $mauve
       $accentAlpha = $mauveAlpha
       $font = JetBrainsMono Nerd Font
+
+      # general
+      general {
+        disable_loading_bar = true
+        hide_cursor = true
+      }
 
       # background
       background {
