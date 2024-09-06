@@ -57,7 +57,10 @@ in {
       };
 
       # fix https://github.com/ryan4yin/nix-config/issues/10
-      security.pam.services.swaylock = {};
+      # security.pam.services.swaylock = {};
+
+      # fix: mynixos.com/home-manager/option/programs.hyprlock.enable
+      security.pam.services.hyprlock = {};
     })
 
     (mkIf cfgXorg.enable {
