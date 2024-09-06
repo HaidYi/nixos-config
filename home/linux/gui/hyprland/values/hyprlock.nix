@@ -7,7 +7,7 @@
     enable = true;
 
     extraConfig = ''
-      source $XDG_CONFIG_HOME/hypr/hyprlock/mocha.conf
+      source = $XDG_CONFIG_HOME/hypr/hyprlock/mocha.conf
 
       $accent = $mauve
       $accentAlpha = $mauveAlpha
