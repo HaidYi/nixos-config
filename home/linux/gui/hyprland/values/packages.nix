@@ -7,6 +7,7 @@
 {
   home.packages = with pkgs; [
     waybar # the status bar
+    hyprlock # locking the screen
     mako # the notification daemon, the same as dust
 
     # audio
