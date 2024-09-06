@@ -90,6 +90,6 @@
     '';
   };
 
-  xdg.configFile."hypr/hypylock/mocha.conf".source = ../conf/themes/mocha.conf;
-  xdg.configFile."hypr/hypylock/background.png".source = ../conf/hyprlock/nix-girl.png;
+  xdg.configFile."hypr/hyprlock/mocha.conf".source = ../conf/themes/mocha.conf;
+  xdg.configFile."hypr/hyprlock/background.png".source = ../conf/hyprlock/nix-girl.png;
 }
