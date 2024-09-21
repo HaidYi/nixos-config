@@ -1,7 +1,7 @@
 let
   disk = "nvme0n1"; # The device to partition (Note: Change for different devices)
   luksname = "crypted-nixos"; # the name of encrypted nixos main partition
-  luksdev = "/dev/${disk}p2" # the device name of the luks partition
+  luksdev = "/dev/${disk}p2"; # the device name of the luks partition
 in
 {
 
