@@ -1,3 +1,8 @@
+let
+  disk = "nvme0n1"; # The device to partition (Note: Change for different devices)
+  luksname = "crypted-nixos"; # the name of encrypted nixos main partition
+  luksdev = "/dev/${disk}p2" # the device name of the luks partition
+in
 {
 
   disko.devices = {
@@ -16,7 +21,7 @@
       type = "disk";
 
       # When using disko-install, we will overwrite this value from the commandline
-      device = "/dev/nvme0n1"; # The device to partition (Note: Change for different devices)
+      device = "/dev/${disk}"; 
       content = {
         type = "gpt";
         partitions = {
@@ -39,7 +44,7 @@
             size = "100%";
             content = {
               type = "luks";
-              name = "encrypted";
+              name = "${luksname}";
               settings = {
                 keyFile = "/dev/disk/by-label/NIXOS_DSC"; # The keyfile is stored on a USB stick
                 # The maximum size of the keyfile is 8192 KiB
