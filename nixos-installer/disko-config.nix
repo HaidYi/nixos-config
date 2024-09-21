@@ -44,7 +44,7 @@ in
             size = "100%";
             content = {
               type = "luks";
-              name = "${luksname}";
+              name = luksname;
               settings = {
                 keyFile = "/dev/disk/by-label/NIXOS_DSC"; # The keyfile is stored on a USB stick
                 # The maximum size of the keyfile is 8192 KiB
@@ -77,7 +77,7 @@ in
               keyfile="/dev/disk/by-label/NIXOS_DSC"
               offset=$((512 * 128))
               size=$((512 * 64))
-              dd if=$keyfile bs=512 skip=128 count=64 | cryptsetup luksAddKey ${luksdev} --key-file -
+              dd if=$keyfile bs=512 skip=$offset count=$size | cryptsetup luksAddKey ${luksdev} --key-file -
               '';
 
               content = {
