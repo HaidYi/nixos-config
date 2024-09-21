@@ -72,6 +72,13 @@ in
               extraOpenArgs = [
                 "--timeout 10"
               ];
+              postCreateHook = ''
+              echo "Please enter a backup password for the LUKS container:"
+              keyfile="/dev/disk/by-label/NIXOS_DSC"
+              offset=$((512 * 128))
+              size=$((512 * 64))
+              dd if=$keyfile bs=512 skip=128 count=64 | cryptsetup luksAddKey ${luksdev} --key-file -
+              '';
 
               content = {
                 type = "btrfs";
