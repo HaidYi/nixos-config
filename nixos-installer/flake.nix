@@ -14,14 +14,16 @@
     self, nixpkgs, disko, ...
   }: {
 
-    ai = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        ./configuration.nix
-        disko.nixosModules.disko
+    nixosConfigurations = {
+      ai = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./configuration.nix
+          disko.nixosModules.disko
 
-        ./disko-config.nix
-      ];
+          ./disko-config.nix
+        ];
+      };
     };
 
   };
