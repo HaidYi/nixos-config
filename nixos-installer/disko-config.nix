@@ -19,7 +19,7 @@
       device = "/dev/nvme0n1"; # The device to partition (Note: Change for different devices)
       content = {
         type = "gpt";
-        partition = {
+        partitions = {
           # The EFI & Boot partition
           BOOT = {
             size = "648M";
