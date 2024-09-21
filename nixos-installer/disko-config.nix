@@ -1,7 +1,6 @@
 let
   disk = "nvme0n1"; # The device to partition (Note: Change for different devices)
   luksname = "crypted-nixos"; # the name of encrypted nixos main partition
-  luksdev = "/dev/${disk}p2"; # the device name of the luks partition
 in
 {
 
@@ -72,13 +71,14 @@ in
               extraOpenArgs = [
                 "--timeout 10"
               ];
-              postCreateHook = ''
-              echo "Please enter a backup password for the LUKS container:"
-              keyfile="/dev/disk/by-label/NIXOS_DSC"
-              offset=$((512 * 128))
-              size=$((512 * 64))
-              dd if=$keyfile bs=512 skip=$offset count=$size | cryptsetup luksAddKey ${luksdev} --key-file -
-              '';
+              # postCreateHook = ''
+              #   echo "Please enter a backup password for the LUKS container:"
+              #   keyfile="/dev/disk/by-label/NIXOS_DSC"
+              #   luksdev="/dev/nvme01p2"
+              #   offset=128
+              #   size=64
+              #   dd if=$keyfile bs=512 skip=$offset count=$size | cryptsetup luksAddKey $luksdev --key-file -
+              # '';
 
               content = {
                 type = "btrfs";
