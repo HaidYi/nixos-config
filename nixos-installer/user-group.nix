@@ -24,6 +24,8 @@
       "wheel"
       "docker"
     ];
+
+    openssh.authorizedKeys.keys = myvars.sshAuthorizedKeys;
   };
 
   # root's ssh key are mainly used for remote deployment
