@@ -13,6 +13,9 @@
     pkgs.ncdu
   ];
 
+  # required by impermanence
+  fileSystems."/persistent".neededForBoot = true;
+
   # NOTE: impermanence only mounts the directory/file list below to /persistent
   # If the directory/file already exists in the root filesystem, you should
   # move those files/directories to /persistent first!
