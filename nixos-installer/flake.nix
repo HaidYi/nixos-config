@@ -17,11 +17,21 @@
     nixosConfigurations = {
       ai = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs =
+          inputs
+          // {
+            myvars.username = "haidyi";
+            myvars.userfullname = "David Yi";
+            initialHashedpassword = "$7$CU..../....XSwRi/gQKbF2rAWSVRuOL0$0vqtQsOixcPVP7xve4Obh64ZJIGsBL.LdHgZJU./G.7";
+          };
+
         modules = [
           ./configuration.nix
           disko.nixosModules.disko
 
           ./disko-config.nix
+          ./user-group.nix
+          ./impermanence.nix
         ];
       };
     };
