@@ -1,0 +1,1 @@
+../../nixos-installer/disko-config.nix

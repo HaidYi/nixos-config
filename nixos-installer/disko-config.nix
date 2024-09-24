@@ -1,8 +1,16 @@
+{
+  lib,
+  disko,
+  ...
+}:
 let
   disk = "nvme0n1"; # The device to partition (Note: Change for different devices)
   luksname = "crypted-nixos"; # the name of encrypted nixos main partition
 in
 {
+  imports = [
+    disko.nixosModules.disko
+  ];
 
   disko.devices = {
     nodev."/" = {
