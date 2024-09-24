@@ -11,7 +11,7 @@
         identitiesOnly = true;
       };
     };
-    
+
     extraConfig = "AddKeysToAgent yes";
   };
 }
