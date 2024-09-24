@@ -6,12 +6,19 @@ in {
 
   imports = [
     # include the results of the hardware scan
+    # NOTE: hardware-configuration.nix should be changed based on different hosts
     ./hardware-configuration.nix
+
+    # persist data under /persistence
+    ./impermanence.nix
+    # disk partition and encryption
+    ./disko-config.nix
   ];
 
   networking = {
     inherit hostName;
-    # inherit (myvars.networking) defaultGateway nameservers;
+    inherit (myvars.networking) defaultGateway nameservers;
+    # inherit (myvars.networking.hostsInterface.${hostName}) interfaces;
 
     # desktop need its cli for status bar
     networkmanager.enable = true;
