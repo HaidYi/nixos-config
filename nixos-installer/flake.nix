@@ -31,8 +31,8 @@
           };
 
         modules = [
+          # ./configuration.nix is generated via `nixos-generate-config --root /mnt [--no-root-password --verbose --show-trace]`
           ./configuration.nix
-          disko.nixosModules.disko
 
           ./disko-config.nix
           ./user-group.nix
