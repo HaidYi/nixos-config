@@ -23,6 +23,19 @@
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
+    # disko, used for disk partition and encryption
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    impermanence.url = "github:nix-community/impermanence";
+
     # home-manager, used for managing user configuration
     home-manager = {
       # unstable url
@@ -46,12 +59,13 @@
       url = "github:cachix/pre-commit-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+
     haumea = {
       url = "github:nix-community/haumea/v0.2.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    
   };
 
   # outputs = {
