@@ -26,6 +26,7 @@
 
             myvars.sshAuthorizedKeys = [
               "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII+hj8kjTXubyM9hYeSzhmZxlZmfVaqjhMUJTsXyi19i haidyi@honkai-gpt"
+              "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOlvZuU1jfgsh4/rfVv2U4zWnN6HP9oPXEAeRgepD9xQ haidyi@arlecchino"
             ];
           };
 
