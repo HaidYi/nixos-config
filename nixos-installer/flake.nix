@@ -34,6 +34,7 @@
           # ./configuration.nix is generated via `nixos-generate-config --root /mnt [--no-root-password --verbose --show-trace]`
           ./configuration.nix
 
+          ./base.nix # base.nix contains basic utilities
           ./disko-config.nix
           ./user-group.nix
           ./impermanence.nix
