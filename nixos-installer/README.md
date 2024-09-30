@@ -108,7 +108,8 @@ nixos-install --root /mnt --flake '/mnt/etc/nixos#<flake-output>' --no-root-pass
 ```
 
 > [!Note]
-> Set flag `--no-root-password` because we use `initialHashedPassword` to set the password, or it will give > a prompt to let you type the password for `root` user. Moreover, even if we set the root password by 
+> Set flag `--no-root-password` because we use `initialHashedPassword` to set the password, or it will give 
+> a prompt to let you type the password for `root` user. Moreover, even if we set the root password by 
 > removing `--no-root-password`, the root password won't be saved after rebooting.
 
 ### 8. Optional: Pre-reboot Steps
