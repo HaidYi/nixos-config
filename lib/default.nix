@@ -4,6 +4,8 @@
 
   attrs = import ./attr.nix {inherit lib;};
 
+  genK8sCoreModule = import ./genK8sCoreModule.nix;
+
   # use path relative to the root of the project
   relativeToRoot = lib.path.append ../.;
   scanPaths = path:
