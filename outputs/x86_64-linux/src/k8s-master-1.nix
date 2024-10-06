@@ -19,7 +19,7 @@
         # common
         "systems/nixos/server/server.nix"
         # host specific
-        "hostds/k8s/${name}"
+        "hosts/k8s/${name}"
       ]);
 
     home-modules = map mylib.relativeToRoot [
@@ -30,7 +30,7 @@
   systemArgs = modules // args;
 
 in {
-  nixConfigurations.${name} = mylib.nixosSystem systemArgs;
+  nixosConfigurations.${name} = mylib.nixosSystem systemArgs;
 
-  packages.${name} = inputs.self.nixosConfigurations."${name}".config.formats.qcow2;
+  packages.${name} = inputs.self.nixosConfigurations.${name}.config.formats.qcow;
 }
