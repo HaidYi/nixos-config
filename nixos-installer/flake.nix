@@ -32,7 +32,7 @@
 
         modules = [
           # ./configuration.nix is generated via `nixos-generate-config --root /mnt [--no-root-password --verbose --show-trace]`
-          ./configuration.nix
+          ./configuration.nix  # need to be replaced or generated on our own host machine
 
           ./base.nix # base.nix contains basic utilities
           ./disko-config.nix
