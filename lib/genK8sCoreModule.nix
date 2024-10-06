@@ -1,12 +1,13 @@
 {
   pkgs,
+  lib,
   hostName,
   networking,
   ...
 }: let
   inherit (networking) defaultGateway nameservers prefixLength;
   inherit (networking.hostAddr.${hostName}) iface ipv4;
-  ipv4WithMask = "${ipv4}/${prefixLength}";
+  ipv4WithMask = "${ipv4}/${toString prefixLength}";
 in {
   # supported file systems, so we can mount any removable disks with these filesystems
   boot.supportedFilesystems = [
