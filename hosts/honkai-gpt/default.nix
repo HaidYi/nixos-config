@@ -17,7 +17,7 @@ in {
 
   networking = {
     inherit hostName;
-    inherit (myvars.networking) defaultGateway nameservers;
+    # inherit (myvars.networking) defaultGateway nameservers;
     # inherit (myvars.networking.hostsInterface.${hostName}) interfaces;
 
     # desktop need its cli for status bar
