@@ -10,9 +10,10 @@
 
   # use the EFI boot loader
   boot.loader.efi.canTouchEfiVariables = true;
-  # depending on how you configure your disk mounts, change this to /boot or /boot/efi.
-  boot.loader.efi.efiSysMountPoint = "/boot";
   boot.loader.systemd-boot.enable = true;
+
+  # depending on how you configure your disk mounts, change this to /boot or /boot/efi.
+  # boot.loader.efi.efiSysMountPoint = "/boot";
 
   # boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelPackages = pkgs.linuxPackages_xanmod_latest;
@@ -45,20 +46,9 @@
     "exfat"
   ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/1eacfa07-605d-4b57-8d9f-79815aaacb5d";
-      fsType = "ext4";
-    };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/96A7-CBC2";
-      fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
-    };
-
-  swapDevices =
-    [ { device = "/dev/disk/by-uuid/64867fa9-1ee2-4f82-8ba9-1c15380a87c6"; }
-    ];
+  # swapDevices =
+  #   [ { device = "/swap/swapfile"; }
+  #   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
