@@ -19,6 +19,26 @@ in {
     "exfat"
   ];
 
+  # Enable kvm, vfio-pic and ipvs kernel modules
+  boot.kernelModules = [ "kvm-intel" "vfio-pci" ]
+    ++ [
+      "ip_vs"
+      "ip_vs_rr"
+      "ip_vs_wrr"
+      "ip_vs_sh"
+  ];
+  boot.extraModprobeConfig = "options kvm_intel nested=1";
+
+  # Network-related cli packages
+  environment.systemPackages = with pkgs; [
+    ipset
+    ipvsadm
+  ];
+
+  # Enable container runtime environment, `containerd`
+  # Feel free to change to `docker` or `oci-containers`
+  virtualisation.containerd.enable = true;
+
   # networking = {
   #   inherit hostName;
 
