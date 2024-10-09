@@ -13,11 +13,17 @@
     inherit (myvars) networking;
   };
 
+  masterModule = mylib.genK8sMasterModule {
+    inherit pkgs hostName;
+    inherit (myvars) networking;
+  };
+
 in {
   imports =
     (mylib.scanPaths ./.)
   ++ [
     # ../disko-config.nix
     coreModule
+    masterModule
   ];
 }
