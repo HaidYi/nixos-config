@@ -5,7 +5,7 @@
   ...
 }: let
   k8sMasterAddress = networking.hostAddr.${masterHost}.ipv4;
-{
+in {
 
   services.kubernetes = {
     roles = [ "node" ];

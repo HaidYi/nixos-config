@@ -5,7 +5,7 @@
   ...
 }: let
   k8sMasterAddress = networking.hostAddr.${hostName}.ipv4;
-{
+in {
 
   # install utility tools for managing k8s cluster
   environment.systemPackages = with pkgs; [
@@ -23,11 +23,10 @@
 
 
   # set up k8s service in master nodes
-  # TODO: add configurations for master nodes
   services.kubernetes = {
     roles = [ "master" ];
     masterAddress = k8sMasterAddress;
-    easyCert = true;
+    easyCerts = true;
     apiserver = {
       securePort = 6443;
       serviceClusterIpRange = "10.0.0.0/24"; # svc ip range with k8s cluster
@@ -40,7 +39,7 @@
     # add on plugins (e.g. dns)
     addons = {
       dns.enable = true;
-    }
+    };
   };
 }
 

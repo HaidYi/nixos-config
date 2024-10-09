@@ -14,7 +14,7 @@
     inherit (myvars) networking;
   };
 
-  workerModule = mylib.genK8sWokerModule {
+  workerModule = mylib.genK8sWorkerModule {
     inherit pkgs masterHost;
     inherit (myvars) networking;
   };
