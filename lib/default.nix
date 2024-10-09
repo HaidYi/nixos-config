@@ -5,6 +5,8 @@
   attrs = import ./attr.nix {inherit lib;};
 
   genK8sCoreModule = import ./genK8sCoreModule.nix;
+  genK8sMasterModule = import ./genK8sMasterModule.nix;
+  genK8sWorkerModule = import ./genK8sWorkerModule.nix;
 
   # use path relative to the root of the project
   relativeToRoot = lib.path.append ../.;
