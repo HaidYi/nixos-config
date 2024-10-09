@@ -37,7 +37,6 @@ in {
 
   # Enable container runtime environment, `containerd`
   # Feel free to change to `docker` or `oci-containers`
-  virtualisation.containerd.enable = true;
 
   # networking = {
   #   inherit hostName;
