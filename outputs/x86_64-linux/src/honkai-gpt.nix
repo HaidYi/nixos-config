@@ -15,7 +15,7 @@
   base-modules = {
     nixos-modules = map mylib.relativeToRoot [
       # common
-      # "secrets/nixos.nix"
+      "secrets/nixos.nix"
       "systems/nixos/desktop.nix"
       # host specific
       "hosts/honkai-${name}"
