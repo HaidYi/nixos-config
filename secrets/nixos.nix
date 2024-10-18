@@ -63,7 +63,7 @@ in {
     "agenix/nixos-luks-keyfile" = {
       source = config.age.secrets."nixos-luks-keyfile".path;
       mode = "0400";
-      user = root;
+      user = "root";
     };
 
     "agenix/k8s-ca.key" = {
