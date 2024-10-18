@@ -54,6 +54,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # secrets management
+    agenix = {
+      # lock with git commit at 0.15.0
+      # url = "github:ryantm/agenix/564595d0ad4be7277e07fa63b5a991b3c645655d";
+      # replaced with a type-safe reimplementation to get a better error message and less bugs.
+      url = "github:ryan4yin/ragenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # add git hooks to format nix code before commmit
     pre-commit-hooks = {
       url = "github:cachix/pre-commit-hooks.nix";
@@ -65,7 +74,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    
+    ### self-owned repository ###
+
+    mysecrets = {
+      url = "git+ssh://git@github.com/HaidYi/nix-secrets.git?shallow=1";
+      flake = false;
+    };
+
   };
 
   # outputs = {
