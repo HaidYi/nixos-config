@@ -37,8 +37,6 @@
     gnugrep # replacee macos's grep
     gnutar # replacee macos's tar
 
-    # darwin only apps
-    utm # virtual machine
   ];
 
   environment.variables = {
@@ -152,6 +150,9 @@
       "spotify"
       "qqmusic"
       "neteasemusic" # music
+
+      # VMs
+      utm # virtual machine
 
       # Misc
       "balenaetcher" # A cross-platform tool to flash OS images
