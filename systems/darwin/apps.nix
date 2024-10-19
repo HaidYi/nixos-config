@@ -103,7 +103,6 @@
       "gnu-tar"
 
       # misc that nix do not have cache for.
-      "git-trim"
       "terraform"
       "terraformer"
     ];
