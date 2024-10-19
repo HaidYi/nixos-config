@@ -151,7 +151,7 @@
       "neteasemusic" # music
 
       # VMs
-      utm # virtual machine
+      "utm" # virtual machine
 
       # Misc
       "balenaetcher" # A cross-platform tool to flash OS images
