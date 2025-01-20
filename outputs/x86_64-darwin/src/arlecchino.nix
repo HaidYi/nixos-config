@@ -16,7 +16,7 @@
     darwin-modules =
       (map mylib.relativeToRoot [
         # common
-        # "secrets/darwin.nix"
+        "secrets/darwin.nix"
         "systems/darwin"
         # host specific
         "hosts/darwin-${name}"
