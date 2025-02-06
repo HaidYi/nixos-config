@@ -4,14 +4,18 @@
   networking,
   ...
 }: let
-  k8sMasterAddress = networking.hostAddr.${hostName}.ipv4;
+  k8sMasterIP = networking.hostAddr.${hostName}.ipv4;
+  k8sMasterAPIServerPort = 6443;
 in {
 
   # install utility tools for managing k8s cluster
   environment.systemPackages = with pkgs; [
+    # packages for administration tasks
     k9s
     kubectl
+    kompose
     istioctl
+    kubernetes
     kubernetes-helm
     cilium-cli # install manage and troubleshoot k8s cluster
     fluxcd # sync k8s with source of configurations (e.g. git repository)
@@ -24,22 +28,27 @@ in {
 
   # set up k8s service in master nodes
   services.kubernetes = {
-    roles = [ "master" ];
-    masterAddress = k8sMasterAddress;
+    roles = [ "master" "node" ];
+    masterAddress = hostName;
+    apiserverAddress = "https://${hostName}:${toString k8sMasterAPIServerPort}";
     easyCerts = true;
     apiserver = {
-      securePort = 6443;
-      serviceClusterIpRange = "10.0.0.0/24"; # svc ip range with k8s cluster
+      securePort = k8sMasterAPIServerPort;
+      advertiseAddress = k8sMasterIP;
+      # serviceClusterIpRange = "10.0.0.0/24"; # svc ip range with k8s cluster
     };
 
     # cluster node and pod ip range within k8s cluster
-    clusterCidr = "10.244.0.0/16";
-    proxy.extraOpts = "--proxy-mode=ipvs"; # use ipvs for better networking performance
+    # clusterCidr = "10.244.0.0/16";
+    # proxy.extraOpts = "--proxy-mode=ipvs"; # use ipvs for better networking performance
 
     # add on plugins (e.g. dns)
     addons = {
       dns.enable = true;
     };
+
+    # needed if you use swap
+    kubelet.extraOpts = "--fail-swap-on=false";
   };
 }
 

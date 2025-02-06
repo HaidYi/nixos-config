@@ -4,31 +4,38 @@
   networking,
   ...
 }: let
-  k8sMasterAddress = networking.hostAddr.${masterHost}.ipv4;
+  k8sMasterIP = networking.hostAddr.${masterHost}.ipv4;
   k8sMasterAPIServerPort = 6443;
 in {
 
+  # resolve master hostname
+  networking.extraHosts = "${k8sMasterIP} ${masterHost}";
+
   # packages for administration
   environment.systemPackages = with pkgs; [
+    kompose
     kubectl
+    kubernetes
   ];
 
   services.kubernetes = let
-    api = "https://${k8sMasterAddress}:${toString k8sMasterAPIServerPort}";
+    api = "https://${masterHost}:${toString k8sMasterAPIServerPort}";
   in
   {
     roles = [ "node" ];
-    masterAddress = k8sMasterAddress;
+    masterAddress = masterHost;
     easyCerts = true;
 
     # point kubelet and other services to the api server
     kubelet.kubeconfig.server = api; 
     apiserverAddress = api;
 
-    clusterCidr = "10.244.0.0/16";
+    # clusterCidr = "10.244.0.0/16";
     # use coredns
     addons.dns.enable = true;
 
+    # needed if you use swap
+    kubelet.extraOpts = "--fail-swap-on=false";
   };
 
   # set-up flannel service, or the coredns cannot be started
