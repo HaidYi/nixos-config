@@ -26,6 +26,7 @@
     ldns # A DNS library that facilitates DNS tool programming
     wget
     curl
+    telnet
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     nmap # A utility for network discovery and security auditing
     ipcalc # A calculator for the IPv4/6 addresses
