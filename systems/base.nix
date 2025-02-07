@@ -23,10 +23,10 @@
     mtr # A networking tools
     iperf3 # A TCP, UDP, and SCTP network bandwidth measurement tool 
     dnsutils # A tool that contains utilities for querying Domain Name System (DNS) servers
+    inetutils # A collection of common network programs
     ldns # A DNS library that facilitates DNS tool programming
     wget
     curl
-    telnet
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     nmap # A utility for network discovery and security auditing
     ipcalc # A calculator for the IPv4/6 addresses
