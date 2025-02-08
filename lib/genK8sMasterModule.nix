@@ -8,6 +8,9 @@
   k8sMasterAPIServerPort = 6443;
 in {
 
+  # resolve master hostname
+  networking.extraHosts = "${k8sMasterIP} ${hostName}";
+
   # install utility tools for managing k8s cluster
   environment.systemPackages = with pkgs; [
     # packages for administration tasks
