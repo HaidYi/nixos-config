@@ -55,13 +55,13 @@ in {
 
     # add on plugins (e.g. dns)
     addons.dns.enable = true;
-
-    # For same layer-2 network, use host-gw instead of vxlan
-    services.flannel.backend = {
-      Type = "host-gw";
-    };
-
   };
+
+  # For same layer-2 network, use host-gw instead of vxlan
+  services.flannel.backend = {
+    Type = "host-gw";
+  };
+
 }
 
 
