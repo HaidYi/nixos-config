@@ -38,6 +38,7 @@
     };
 
     settings = {
+      term = "xterm-256color"; # for remote ssh support
       # scroll back lines
       scrollback_lines = 10000;
       cursor_shape = "underline";
