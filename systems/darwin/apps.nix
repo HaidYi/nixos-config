@@ -123,6 +123,8 @@
       "visual-studio-code"
       "pycharm-ce"
       "zed" # zed editor
+      "webstorm" # jetbrains' webstorm editor for js development
+      "cursor" # LLM-powered AI editor
 
       # Note taking apps
       "typora"
