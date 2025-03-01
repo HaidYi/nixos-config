@@ -61,6 +61,8 @@
         "x-scheme-handler/http" = browser;
         "x-scheme-handler/https" = browser;
 
+        "x-scheme-handler/tg" = ["org.telegram.desktop.desktop "];
+
         # audio/video/image
         "audio/*" = ["mpv.desktop"];
         "video/*" = ["mpv.desktop"];
