@@ -29,7 +29,7 @@ in
         };
 
         git_branch = {
-          format = "[$symbol$branch]($style)";
+          format = "[$symbol$branch]($style) ";
           symbol = " ";
           style = "bold mauve";
         };
@@ -44,7 +44,7 @@ in
         };
 
         os.symbols = {
-          AIX = "➿ ";
+          AIX = "➿";
           Alpaquita = "🔔";
           AlmaLinux = "💠";
           Alpine = "🏔️";
