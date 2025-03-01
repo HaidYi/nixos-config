@@ -7,11 +7,24 @@
 {
   home.packages = with pkgs; [
     waybar # the status bar
-    hyprlock # locking the screen
+    swaybg # the wallpaper
+    swayidle # the idle timeout
+    swaylock # locking the screen
+    wlogout # logout menu
+    wl-clipboard # copying and pasting
+    hyprpicker # color picker
+
+    pkgs-unstable.hyprshot # screen shot
+    grim # taking screenshots
+    slurp # selecting a region to screenshot
+    wf-recorder # screen recording
+
     mako # the notification daemon, the same as dust
 
+    yad # a fork of zenity, for creating dialogs 
+
     # audio
-    alsa-utils
+    alsa-utils # provides amixer/alsamixer
     mpd # for playing system sounds
     mpc-cli # command-line mpd client
     ncmpcpp # mpd client with a UI
