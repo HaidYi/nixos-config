@@ -23,6 +23,7 @@
 
     firefox = {
       enable = true;
+      # disable genome extension as we use hyprland
       enableGnomeExtensions = false;
       package = pkgs.firefox-wayland; # firefox with wayland support
     };
