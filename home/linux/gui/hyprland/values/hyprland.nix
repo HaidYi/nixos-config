@@ -21,7 +21,10 @@
       ];
     };
     extraConfig = builtins.readFile ../conf/hyprland.conf;
-    systemd.enable = true;
+    systemd = {
+      enable = true;
+      variables = ["--all"];
+    };
   };
 
   home.file.".wayland-session" = {
@@ -45,6 +48,12 @@
       recursive = true;
     };
 
+    "hypr/wlogout" = {
+      source = ../conf/wlogout;
+      recursive = true;
+    };
+
+    # music player -mpd
     "mpd" = {
       source = ../conf/mpd;
       recursive = true;
