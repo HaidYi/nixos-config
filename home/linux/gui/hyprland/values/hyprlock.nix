@@ -7,7 +7,7 @@
     enable = true;
 
     extraConfig = ''
-      source = $XDG_CONFIG_HOME/hypr/hyprlock/mocha.conf
+      source = $HOME/.config/hypr/hyprlock/mocha.conf
 
       $accent = $mauve
       $accentAlpha = $mauveAlpha
@@ -22,7 +22,7 @@
       # background
       background {
         monitor =
-        path = $XDG_CONFIG_HOME/hypr/hyprlock/background.png
+        path = $HOME/.config/hypr/hyprlock/background.png
         blur_passes = 0
         color = $base
       }
