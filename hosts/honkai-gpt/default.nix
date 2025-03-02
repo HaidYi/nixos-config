@@ -13,7 +13,8 @@ in {
     ./impermanence.nix
     # disk partition and encryption
     ./disko-config.nix
-    ./k8s.nix
+    # k3s service
+    # ./k8s.nix
   ];
 
   networking = {
