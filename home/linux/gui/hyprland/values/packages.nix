@@ -9,7 +9,6 @@
     waybar # the status bar
     swaybg # the wallpaper
     swayidle # the idle timeout
-    swaylock # locking the screen
     wlogout # logout menu
     wl-clipboard # copying and pasting
     hyprpicker # color picker
