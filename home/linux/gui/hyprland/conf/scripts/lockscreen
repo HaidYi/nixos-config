@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Times the screen off and puts it to background
-swayidle \
+hypridle \
   timeout 300 'hyprctl dispatch dpms off' \
   resume 'hyprctl dispatch dpms on' &
 # Locks the screen immediately
