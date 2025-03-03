@@ -8,10 +8,11 @@
   home.packages = with pkgs; [
     waybar # the status bar
     swaybg # the wallpaper
-    swayidle # the idle timeout
+    # swayidle # the idle timeout
     wlogout # logout menu
     wl-clipboard # copying and pasting
     hyprpicker # color picker
+    hypridle # hyprland idle timout
 
     pkgs-unstable.hyprshot # screen shot
     grim # taking screenshots
