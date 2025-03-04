@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Times the screen off and puts it to background
-hypridle \
-  timeout 300 'hyprctl dispatch dpms off' \
-  resume 'hyprctl dispatch dpms on' &
-# Locks the screen immediately
-hyprlock
-# Kills last background task so idle timer doesn't keep running
-kill %%
+# Locks the screen
+pidof hyprlock || hyprlock
 
