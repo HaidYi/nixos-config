@@ -39,6 +39,7 @@
       })
       julia-mono
       dejavu_fonts
+      maple-mono-NF
     ];
 
     # user defined fonts
