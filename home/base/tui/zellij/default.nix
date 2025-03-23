@@ -219,8 +219,8 @@ in {
               cwd "/"
           }
       }
-    ''
-  
+    '';
+
   # add the catppuccin theme file under the zellij config folder
   xdg.configFile."zellij/themes/catppuccin.kdl".text =
     ''
