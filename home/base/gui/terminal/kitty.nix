@@ -21,7 +21,8 @@
     # and it's installed by home-manager if `theme` is specified.
     theme = "Catppuccin-Mocha";
     font = {
-      name = "Hack Nerd Font";
+      # name = "Hack Nerd Font";
+      name = "Maple Mono NF";
 
       # use different sizes for different hosts, we leave the font to be set by host's home.nix file
       # use different font size on macOS
