@@ -48,7 +48,7 @@
     # enableNushellIntegration = false;
 
     git = true;
-    icons = true;
+    icons = "auto";
   };
 
   # configure the fzf tool
