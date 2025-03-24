@@ -73,6 +73,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # generate iso/qcow2/docker/... image from nixos configuration
     nixos-generators = {
       url = "github:nix-community/nixos-generators";
