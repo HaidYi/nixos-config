@@ -13,5 +13,5 @@
   programs.home-manager.enable = true;
 
   # Set home-manager state version
-  home.stateVersion = "24.05";
+  home.stateVersion = "24.11";
 }
