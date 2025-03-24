@@ -33,9 +33,9 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
 
     # for macos
-    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-24.11-darwin";
     nix-darwin = {
-      url = "github:lnl7/nix-darwin";
+      url = "github:lnl7/nix-darwin/nix-darwin-24.11";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
